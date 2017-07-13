@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Linux Libertine";
+  src: url(../fonts/linux-libertine.ttf);
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+  letter-spacing: 1px;
+  min-height: 100%;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #1ad1ff;
+}
+
+header {
+  margin-bottom: 10%;
+}
+
+h1 {
+  font: 2rem "Linux Libertine", serif;
+  font-variant: small-caps;
+}
+
+form {
+  max-width: 500px;
+  padding: 10px;
+}
+
+.fa-search {
+  color: #333;
+  left: 2px;
+  top: 9px;
+}
+
+#search-field {
+  border-radius: 30px;
+  padding-left: 35px;
+}
+
+.well {
+  background-color: #404040;
+  border: none;
+  line-height: 22px;
+  margin-top: 20px;
+  max-width: 650px;
+  padding: 20px;
+}
+
+.well h2 {
+  font: 2.4rem "Linux Libertine", serif;
+  letter-spacing: 3px;
+  margin-top: 2px;
+}
+
+.alert {
+  margin: 8%;
+}
+
+footer {
+  background-color: #404040;
+  bottom: 0;
+  font-size: 1.2rem;
+  left: 0;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 6px 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .well h2 {
+    font-size: 2.6rem;
+  }
+}
