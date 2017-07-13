@@ -11,6 +11,27 @@
 </head>
 
 <body>
+  <div class="container-fluid">
+    <!-- HEADER -->
+    <header class="text-left">
+      <h1>Wikipedia Viewer</h1>
+    </header>
+    <!-- SEARCH FORM -->
+    <section class="text-center" id="search-form">
+      <div><span class="fa fa-wikipedia-w fa-4x"></span></div>
+      <form class="center-block" role="search">
+        <div class="form-group has-feedback">
+          <span class="fa fa-search form-control-feedback"></span>
+          <input type="search" class="form-control" id="search-field" placeholder="Search for a Wikipedia article...">
+        </div>
+      </form>
+      <p>...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" id="random-entry">random Wikipedia article</a></p>
+    </section>
+    <!-- RESULTS -->
+    <section id="results"></section>
+    <!-- FOOTER -->
+    <footer class="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
 </body>
