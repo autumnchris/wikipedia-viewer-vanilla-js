@@ -1,6 +1,6 @@
 function loadData() {
 
-  $('#results').html('');
+  $('#results').empty();
 
   $.ajax({
     dataType: 'jsonp',
@@ -18,7 +18,7 @@ function loadData() {
       var articleTitle = searchResults[i].title;
       var articleSnippet = searchResults[i].snippet;
       var articleURL = 'https://en.wikipedia.org/wiki/' + articleTitle;
-      var entries = '<div class="well center-block"><h2>' + articleTitle + '</h2><p>' + articleSnippet + '...</p><a href="' + articleURL + '" target="_blank">Continue Reading...</a></div>';
+      var entries = '<article><div class="well center-block"><h2>' + articleTitle + '</h2><p>' + articleSnippet + '...</p><a href="' + articleURL + '" target="_blank">Continue Reading...</a></div></article>';
       $('#results').append(entries);
     }
   }).fail(function() {
