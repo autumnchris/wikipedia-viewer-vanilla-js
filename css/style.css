@@ -20,7 +20,8 @@ body {
 a,
 a:visited,
 a:hover,
-a:active {
+a:active,
+a:focus {
   color: #1ad1ff;
 }
 
