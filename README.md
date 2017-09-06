@@ -6,11 +6,10 @@ My Build a Wikipedia Viewer project for the Front End Development Certification 
 
 ## Built With
 * AJAX
-* JSON
 * [jQuery](https://jquery.com)
 * JavaScript
 * CSS3
-* [Bootstrap.CSS](http://getbootstrap.com/css)
+* [Bootstrap CSS](http://getbootstrap.com/css)
 * HTML5
 
 ## Other Tools Used
