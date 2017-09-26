@@ -20,13 +20,16 @@ function loadData() {
     }
 
     else {
-      for (var i = 0; i < searchResults.length; i++) {
-        var articleTitle = searchResults[i].title;
-        var articleSnippet = searchResults[i].snippet;
-        var articleURL = 'https://en.wikipedia.org/wiki/' + articleTitle;
-        var entries = '<article><div class="well center-block"><h2>' + articleTitle + '</h2><p>' + articleSnippet + '...</p><a href="' + articleURL + '" target="_blank">Continue Reading...</a></div></article>';
+      searchResults.map(function(entry) {
+        var entries = '<article>' +
+          '<div class="well center-block">' +
+            '<h2>' + entry.title + '</h2>' +
+            '<p>' + entry.snippet + '...</p>' +
+            '<a href="https://en.wikipedia.org/wiki/' + entry.title + '" target="_blank">Continue Reading...</a>' +
+          '</div>' +
+        '</article>';
         $('#results').append(entries);
-      }
+      });
     }
   }).fail(function() {
     $('#results').html('<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to load Wikipedia search results.</div>');
