@@ -9,7 +9,7 @@ My Build a Wikipedia Viewer project for the Front End Development Certification 
 * [jQuery](https://jquery.com)
 * JavaScript
 * CSS3
-* [Bootstrap CSS](http://getbootstrap.com/css)
+* [Bootstrap 3 CSS](https://getbootstrap.com/docs/3.3/css)
 * HTML5
 
 ## Other Tools Used
