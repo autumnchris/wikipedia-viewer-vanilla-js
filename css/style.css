@@ -50,6 +50,11 @@ form {
   padding-left: 35px;
 }
 
+#spinner {
+  display: none;
+  margin: 3%;
+}
+
 .well {
   background-color: #404040;
   border: none;

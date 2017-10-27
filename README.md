@@ -14,8 +14,8 @@ My Build a Wikipedia Viewer project for the Front End Development Certification 
 
 ## Other Tools Used
 * [Media Wiki API](https://www.mediawiki.org/wiki/API:Main_page)
-* [Linux Libertine font](http://www.dafont.com/linux-libertine.font)
 * [Font Awesome](http://fontawesome.io)
+* [Linux Libertine font](http://www.dafont.com/linux-libertine.font)
 
 ## Demo
 

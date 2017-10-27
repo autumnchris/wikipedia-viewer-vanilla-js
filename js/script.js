@@ -1,6 +1,7 @@
 function loadData() {
 
   var searchInput = $('#search-input').val();
+  $('#spinner').css('display', 'block');
   $('#results').empty();
 
   $.ajax({
@@ -14,6 +15,7 @@ function loadData() {
     }
   }).done(function(wikiData) {
     var searchResults = wikiData.query.search;
+    $('#spinner').css('display', 'none');
 
     if (searchResults.length === 0) {
       $('#results').html('<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to find results for ' + '\"' + searchInput + '\"' + '. Consider revising your search.</div>');
@@ -32,6 +34,7 @@ function loadData() {
       });
     }
   }).fail(function() {
+    $('#spinner').css('display', 'none');
     $('#results').html('<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to load Wikipedia search results.</div>');
   });
 
