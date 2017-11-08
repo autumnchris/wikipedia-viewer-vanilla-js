@@ -18,7 +18,7 @@ function loadData() {
     $('#spinner').css('display', 'none');
 
     if (searchResults.length === 0) {
-      $('#results').html('<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to find results for ' + '\"' + searchInput + '\"' + '. Consider revising your search.</div>');
+      $('#results').html('<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to find results for \"' + searchInput + '\". Consider revising your search.</div>');
     }
 
     else {

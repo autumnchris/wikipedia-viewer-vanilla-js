@@ -1,6 +1,6 @@
-# Wikipedia Viewer
+# Wikipedia Viewer (jQuery)
 
-My Build a Wikipedia Viewer project for the Front End Development Certification on [Free Code Camp](https://www.freecodecamp.org).
+My Build a Wikipedia Viewer project for the Front End Development Certification on [Free Code Camp](https://www.freecodecamp.org) made with jQuery.
 
 ---
 
@@ -19,4 +19,4 @@ My Build a Wikipedia Viewer project for the Front End Development Certification 
 
 ## Demo
 
-View project [here](https://autumnchris.github.io/wikipedia-viewer).
+View project [here](https://autumnchris.github.io/wikipedia-viewer-jquery).
