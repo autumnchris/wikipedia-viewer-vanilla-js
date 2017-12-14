@@ -4,15 +4,17 @@ My project for the [Build a Wikipedia Viewer challenge](https://www.freecodecamp
 
 ---
 
+## User Stories
+1. I can search Wikipedia entries in a search box and see the resulting Wikipedia entries.
+2. I can click a button to see a random Wikipedia entry.
+
 ## Built With
 * AJAX
 * [jQuery](https://jquery.com)
 * CSS3
-* [Bootstrap 3 CSS](https://getbootstrap.com/docs/3.3/css)
+* [Bootstrap](https://getbootstrap.com)
 * HTML5
 * JavaScript
-
-## Other Tools Used
 * [Media Wiki API](https://www.mediawiki.org/wiki/API:Main_page)
 * [Font Awesome](http://fontawesome.io)
 * [Linux Libertine font](http://www.dafont.com/linux-libertine.font)
