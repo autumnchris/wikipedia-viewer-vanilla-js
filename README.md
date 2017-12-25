@@ -21,4 +21,4 @@ My project for the [Build a Wikipedia Viewer challenge](https://www.freecodecamp
 
 ## Demo
 
-View project [here](https://autumnchris.github.io/wikipedia-viewer-jquery).
+View project demo at [https://autumnchris.github.io/wikipedia-viewer-jquery](https://autumnchris.github.io/wikipedia-viewer-jquery).
