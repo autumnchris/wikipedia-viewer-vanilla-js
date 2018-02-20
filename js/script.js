@@ -1,4 +1,4 @@
-function loadData() {
+function submitSearch() {
 
   var searchInput = $('#search-input').val();
   $('#spinner').css('display', 'block');
@@ -41,4 +41,4 @@ function loadData() {
   return false;
 }
 
-$('form').submit(loadData);
+$('form').submit(submitSearch);
