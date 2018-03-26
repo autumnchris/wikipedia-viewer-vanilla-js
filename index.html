@@ -17,21 +17,23 @@
       </header>
       <main>
         <!-- SEARCH FORM -->
-        <div class="text-center"><span class="fa fa-wikipedia-w fa-4x"></span></div>
+        <div class="text-center">
+          <span class="fa fa-wikipedia-w fa-4x"></span>
+        </div>
         <form class="center-block" role="search">
           <div class="form-group has-feedback">
             <span class="fa fa-search form-control-feedback"></span>
-            <input type="search" class="form-control" aria-label="Search for a Wikipedia article..." id="search-input" placeholder="Search for a Wikipedia article..." required>
+            <input type="search" class="form-control search-input" aria-label="Search for a Wikipedia article..." placeholder="Search for a Wikipedia article..." required>
           </div>
         </form>
         <p class="text-center">...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
         <!-- LOADING SPINNER -->
-        <div class="text-center" id="spinner">
+        <div class="text-center spinner">
           <span class="fa fa-refresh fa-spin fa-fw"></span>
           <span class="sr-only">Loading...</span>
         </div>
         <!-- RESULTS -->
-        <div id="results"></div>
+        <div class="results"></div>
       </main>
       <!-- FOOTER -->
       <footer class="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>

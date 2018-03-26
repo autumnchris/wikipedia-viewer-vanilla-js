@@ -1,8 +1,8 @@
 function submitSearch() {
 
-  var searchInput = $('#search-input').val();
-  $('#spinner').css('display', 'block');
-  $('#results').empty();
+  var searchInput = $('.search-input').val();
+  $('.spinner').css('display', 'block');
+  $('.results').empty();
 
   $.ajax({
     dataType: 'jsonp',
@@ -15,10 +15,10 @@ function submitSearch() {
     }
   }).done(function(wikiData) {
     var searchResults = wikiData.query.search;
-    $('#spinner').css('display', 'none');
+    $('.spinner').css('display', 'none');
 
     if (searchResults.length === 0) {
-      $('#results').html('<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to find results for \"' + searchInput + '\". Consider revising your search.</div>');
+      $('.results').html('<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to find results for \"' + searchInput + '\". Consider revising your search.</div>');
     }
 
     else {
@@ -30,12 +30,12 @@ function submitSearch() {
             '<a href="https://en.wikipedia.org/wiki/' + entry.title + '" target="_blank">Continue Reading...</a>' +
           '</div>' +
         '</article>';
-        $('#results').append(entries);
+        $('.results').append(entries);
       });
     }
   }).fail(function() {
-    $('#spinner').css('display', 'none');
-    $('#results').html('<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to load Wikipedia search results.</div>');
+    $('.spinner').css('display', 'none');
+    $('.results').html('<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to load Wikipedia search results.</div>');
   });
 
   return false;

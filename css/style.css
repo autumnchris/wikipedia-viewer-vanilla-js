@@ -48,12 +48,12 @@ form {
   top: 9px;
 }
 
-#search-input {
+.search-input {
   border-radius: 30px;
   padding-left: 35px;
 }
 
-#spinner {
+.spinner {
   display: none;
   font-size: 4.5rem;
   margin: 3%;
