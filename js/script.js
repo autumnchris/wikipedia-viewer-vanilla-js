@@ -14,7 +14,8 @@ function submitSearch() {
       format: 'json'
     }
   }).done(function(wikiData) {
-    var searchResults = wikiData.query.search;
+    var entries,
+    searchResults = wikiData.query.search;
     $('.spinner').css('display', 'none');
 
     if (searchResults.length === 0) {
@@ -23,7 +24,7 @@ function submitSearch() {
 
     else {
       searchResults.map(function(entry) {
-        var entries = '<article>' +
+        entries = '<article>' +
           '<div class="well center-block">' +
             '<h2>' + entry.title + '</h2>' +
             '<p>' + entry.snippet + '...</p>' +
@@ -37,7 +38,6 @@ function submitSearch() {
     $('.spinner').css('display', 'none');
     $('.results').html('<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to load Wikipedia search results.</div>');
   });
-
   return false;
 }
 
