@@ -1,6 +1,6 @@
 function submitSearch() {
 
-  var searchInput = $('.search-input').val();
+  const searchInput = $('.search-input').val();
   $('.spinner').css('display', 'block');
   $('.results').empty();
 
@@ -13,28 +13,28 @@ function submitSearch() {
       srsearch: searchInput,
       format: 'json'
     }
-  }).done(function(wikiData) {
-    var entries,
-    searchResults = wikiData.query.search;
+  }).done(wikiData => {
+    let entries;
+    const searchResults = wikiData.query.search;
     $('.spinner').css('display', 'none');
 
     if (searchResults.length === 0) {
-      $('.results').html('<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to find results for \"' + searchInput + '\". Consider revising your search.</div>');
+      $('.results').html(`<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to find results for "${searchInput}". Consider revising your search.</div>`);
     }
 
     else {
-      searchResults.map(function(entry) {
-        entries = '<article>' +
-          '<div class="well center-block">' +
-            '<h2>' + entry.title + '</h2>' +
-            '<p>' + entry.snippet + '...</p>' +
-            '<a href="https://en.wikipedia.org/wiki/' + entry.title + '" target="_blank">Continue Reading...</a>' +
-          '</div>' +
-        '</article>';
+      searchResults.map(entry => {
+        entries = `<article>
+          <div class="well center-block">
+            <h2>${entry.title}</h2>
+            <p>${entry.snippet}...</p>
+            <a href="https://en.wikipedia.org/wiki/${entry.title}" target="_blank">Continue Reading...</a>
+          </div>
+        </article>`;
         $('.results').append(entries);
       });
     }
-  }).fail(function() {
+  }).fail(() => {
     $('.spinner').css('display', 'none');
     $('.results').html('<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to load Wikipedia search results.</div>');
   });
