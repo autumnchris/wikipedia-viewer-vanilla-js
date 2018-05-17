@@ -19,24 +19,24 @@ function submitSearch() {
     $('.spinner').css('display', 'none');
 
     if (searchResults.length === 0) {
-      $('.results').html(`<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to find results for "${searchInput}". Consider revising your search.</div>`);
+      $('.results').html(`<p class="error-message"><span class="fa fa-exclamation-triangle fa-lg fa-fw"></span> Unable to find results for "${searchInput}". Consider revising your search.</p>`);
     }
 
     else {
       searchResults.map(entry => {
         entries = `<article>
-          <div class="well center-block">
-            <h2>${entry.title}</h2>
-            <p>${entry.snippet}...</p>
+          <h2>${entry.title}</h2>
+          <p>${entry.snippet}...</p>
+          <p>
             <a href="https://en.wikipedia.org/wiki/${entry.title}" target="_blank">Continue Reading...</a>
-          </div>
+          </p>
         </article>`;
         $('.results').append(entries);
       });
     }
   }).fail(() => {
     $('.spinner').css('display', 'none');
-    $('.results').html('<div class="alert alert-warning text-center"><span class="fa fa-warning fa-lg fa-fw"></span> Unable to load Wikipedia search results.</div>');
+    $('.results').html('<p class="error-message"><span class="fa fa-exclamation-triangle fa-lg fa-fw"></span> Unable to load Wikipedia search results.</p>');
   });
   return false;
 }

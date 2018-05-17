@@ -2,42 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Wikipedia Viewer (jQuery)</title>
+    <title>Wikipedia Viewer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <div class="container-fluid">
-      <!-- HEADER -->
-      <header class="text-left">
-        <h1>Wikipedia Viewer</h1>
-      </header>
-      <main>
-        <!-- SEARCH FORM -->
-        <div class="text-center">
-          <span class="fa fa-wikipedia-w fa-4x"></span>
+    <!-- HEADER -->
+    <header>
+      <h1>Wikipedia Viewer</h1>
+    </header>
+    <main>
+      <div class="fab fa-wikipedia-w fa-4x"></div>
+      <!-- SEARCH FORM -->
+      <form role="search">
+        <div class="form-group">
+          <span class="fas fa-search"></span>
+          <input type="search" class="search-input" aria-label="Search for a Wikipedia article..." placeholder="Search for a Wikipedia article..." required>
         </div>
-        <form class="center-block" role="search">
-          <div class="form-group has-feedback">
-            <span class="fa fa-search form-control-feedback"></span>
-            <input type="search" class="form-control search-input" aria-label="Search for a Wikipedia article..." placeholder="Search for a Wikipedia article..." required>
-          </div>
-        </form>
-        <p class="text-center">...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
-        <!-- LOADING SPINNER -->
-        <div class="text-center spinner">
-          <span class="fa fa-refresh fa-spin fa-fw"></span>
-          <span class="sr-only">Loading...</span>
-        </div>
-        <!-- RESULTS -->
-        <div class="results"></div>
-      </main>
-      <!-- FOOTER -->
-      <footer class="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
-    </div>
+      </form>
+      <p>...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
+      <!-- LOADING SPINNER -->
+      <div class="spinner">
+        <span class="fa fa-sync-alt fa-spin fa-2x fa-fw" aria-label="Loading..."></span>
+      </div>
+      <!-- RESULTS -->
+      <div class="results"></div>
+    </main>
+    <!-- FOOTER -->
+    <footer>Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
   </body>

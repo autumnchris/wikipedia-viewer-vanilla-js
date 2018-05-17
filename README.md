@@ -12,7 +12,6 @@ My project for the [Build a Wikipedia Viewer challenge](https://www.freecodecamp
 * AJAX
 * [jQuery](https://jquery.com)
 * CSS3
-* [Bootstrap](https://getbootstrap.com)
 * HTML5
 * JavaScript
 * [Media Wiki API](https://www.mediawiki.org/wiki/API:Main_page)
