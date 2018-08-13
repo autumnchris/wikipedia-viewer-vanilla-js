@@ -19,7 +19,7 @@ function submitSearch() {
     $('.spinner').css('display', 'none');
 
     if (searchResults.length === 0) {
-      $('.results').html(`<p class="error-message"><span class="fa fa-exclamation-triangle fa-lg fa-fw"></span> Unable to find results for "${searchInput}". Consider revising your search.</p>`);
+      $('.results').html(`<p class="message error-message"><span class="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to find results for "${searchInput}". Consider revising your search.</p>`);
     }
 
     else {
@@ -36,7 +36,7 @@ function submitSearch() {
     }
   }).fail(() => {
     $('.spinner').css('display', 'none');
-    $('.results').html('<p class="error-message"><span class="fa fa-exclamation-triangle fa-lg fa-fw"></span> Unable to load Wikipedia search results.</p>');
+    $('.results').html('<p class="message error-message"><span class="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to load Wikipedia search results.</p>');
   });
   return false;
 }
