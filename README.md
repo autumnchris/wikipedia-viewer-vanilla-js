@@ -1,6 +1,6 @@
 # Wikipedia Viewer (jQuery)
 
-My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-wikipedia-viewer) as part of the curriculum for the Coding Interview Take Home Projects on [Free Code Camp](https://www.freecodecamp.org). Built with jQuery.
+My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-wikipedia-viewer) as part of the curriculum for the Coding Interview Take Home Projects on [freeCodeCamp](https://www.freecodecamp.org). Built with jQuery.
 
 ---
 
