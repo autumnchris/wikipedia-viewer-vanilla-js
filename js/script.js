@@ -42,3 +42,4 @@ function submitSearch() {
 }
 
 $('form').submit(submitSearch);
+$('.current-year').html(new Date().getFullYear());
