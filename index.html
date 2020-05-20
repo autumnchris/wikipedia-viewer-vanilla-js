@@ -17,7 +17,7 @@
     <main>
       <div class="fab fa-wikipedia-w fa-4x"></div>
       <!-- SEARCH FORM -->
-      <form role="search">
+      <form role="search" class="search-form">
         <div class="form-group">
           <span class="fas fa-search"></span>
           <input type="search" class="search-input" aria-label="Search for a Wikipedia article..." placeholder="Search for a Wikipedia article..." required>
@@ -29,11 +29,12 @@
         <span class="fa fa-sync-alt fa-spin fa-2x fa-fw" aria-label="Loading..."></span>
       </div>
       <!-- RESULTS -->
-      <div class="results"></div>
+      <div class="search-results"></div>
+      <p class="message error-message"></p>
     </main>
     <!-- FOOTER -->
     <footer>Created by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a> &copy; <span class="current-year"></span></footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -71,18 +71,18 @@ form {
   margin: 3%;
 }
 
-.results {
+.search-results {
   margin-top: 30px;
 }
 
-article {
+.result-item {
   background: hsla(0, 0%, 5%, 0.2);
   margin: 20px auto 0;
   max-width: 650px;
   padding: 20px;
 }
 
-article h2 {
+.result-item h2 {
   color: hsl(0, 0%, 100%);
   font-family: "Linux Libertine", serif;
   font-size: 1.6rem;
@@ -90,7 +90,7 @@ article h2 {
   text-align: left;
 }
 
-article p {
+.result-item p {
   line-height: 22px;
   margin-top: 10px;
   text-align: left;
@@ -101,6 +101,7 @@ article p {
   border: 1px solid hsl(349, 96%, 90%);
   border-radius: 3px;
   color: hsl(349, 96%, 26%);
+  display: none;
   line-height: 20px;
   margin: 12px auto;
   max-width: 700px;

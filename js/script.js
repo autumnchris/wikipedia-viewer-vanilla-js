@@ -1,45 +1,37 @@
-function submitSearch() {
+function submitSearch(event) {
+  event.preventDefault();
+  const searchInput = document.querySelector('.search-input').value;
+  document.querySelector('.spinner').style.display = 'block';
+  document.querySelector('.search-results').innerHTML = '';
 
-  const searchInput = $('.search-input').val();
-  $('.spinner').css('display', 'block');
-  $('.results').empty();
-
-  $.ajax({
-    dataType: 'jsonp',
-    url: 'https://en.wikipedia.org/w/api.php?callback=?',
-    data: {
-      action: 'query',
-      list: 'search',
-      srsearch: searchInput,
-      format: 'json'
-    }
-  }).done(wikiData => {
-    let entries;
-    const searchResults = wikiData.query.search;
-    $('.spinner').css('display', 'none');
+  axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchInput}&origin=*&format=json`).then(wikiData => {
+    const searchResults = wikiData.data.query.search;
+    document.querySelector('.spinner').style.display = 'none';
 
     if (searchResults.length === 0) {
-      $('.results').html(`<p class="message error-message"><span class="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to find results for "${searchInput}". Consider revising your search.</p>`);
+      document.querySelector('.error-message').innerHTML = `<span class="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to find results for "${searchInput}". Consider revising your search.`;
+      document.querySelector('.error-message').style.display = 'block';
     }
-
     else {
-      searchResults.map(entry => {
-        entries = `<article>
-          <h2>${entry.title}</h2>
-          <p>${entry.snippet}...</p>
+      document.querySelector('.search-results').innerHTML = searchResults.map(resultItem => {
+        return `<article class="result-item">
+          <h2>${resultItem.title}</h2>
+          <p>${resultItem.snippet}...</p>
           <p>
-            <a href="https://en.wikipedia.org/wiki/${entry.title}" target="_blank">Continue Reading...</a>
+            <a href="https://en.wikipedia.org/wiki/${resultItem.title}" target="_blank">Continue Reading...</a>
           </p>
         </article>`;
-        $('.results').append(entries);
-      });
+      }).join('');
+      document.querySelector('.error-message').style.display = 'none';
     }
-  }).fail(() => {
-    $('.spinner').css('display', 'none');
-    $('.results').html('<p class="message error-message"><span class="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to load Wikipedia search results.</p>');
+  }).catch(() => {
+    document.querySelector('.error-message').innerHTML = '<span class="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to load Wikipedia search results at this time.';
+    document.querySelector('.spinner').style.display = 'none';
+    document.querySelector('.error-message').style.display = 'block';
   });
-  return false;
 }
 
-$('form').submit(submitSearch);
-$('.current-year').html(new Date().getFullYear());
+document.querySelector('.search-form').addEventListener('submit', (event) => {
+  submitSearch(event);
+});
+document.querySelector('.current-year').innerHTML = new Date().getFullYear();
