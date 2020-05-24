@@ -17,9 +17,7 @@ function submitSearch(event) {
         return `<article class="result-item">
           <h2>${resultItem.title}</h2>
           <p>${resultItem.snippet}...</p>
-          <p>
-            <a href="https://en.wikipedia.org/wiki/${resultItem.title}" target="_blank">Continue Reading...</a>
-          </p>
+          <a href="https://en.wikipedia.org/wiki/${resultItem.title}" class="button" target="_blank">Continue Reading &raquo;</a>
         </article>`;
       }).join('');
       document.querySelector('.error-message').style.display = 'none';

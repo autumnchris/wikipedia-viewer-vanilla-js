@@ -11,6 +11,7 @@ My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodeca
 * CSS3
 * HTML5
 * [Media Wiki API](https://www.mediawiki.org/wiki/API:Main_page)
+* [Normalize.css](https://necolas.github.io/normalize.css)
 * [Font Awesome](https://fontawesome.com)
 * [Linux Libertine font](http://www.dafont.com/linux-libertine.font)
 

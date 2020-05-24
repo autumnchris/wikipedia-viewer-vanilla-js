@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Wikipedia Viewer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -19,11 +19,14 @@
       <!-- SEARCH FORM -->
       <form role="search" class="search-form">
         <div class="form-group">
-          <span class="fas fa-search"></span>
-          <input type="search" class="search-input" aria-label="Search for a Wikipedia article..." placeholder="Search for a Wikipedia article..." required>
+          <span class="fas fa-search search-icon"></span>
+          <input type="search" class="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." autofocus required>
+        </div>
+        <div class="button-group">
+          <input type="submit" class="button" value="Search" />
+          <a href="https://en.wikipedia.org/wiki/Special:Random" class="button" target="_blank">Random Article</a>
         </div>
       </form>
-      <p>...or read a <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random Wikipedia article</a></p>
       <!-- LOADING SPINNER -->
       <div class="spinner">
         <span class="fa fa-sync-alt fa-spin fa-2x fa-fw" aria-label="Loading..."></span>
