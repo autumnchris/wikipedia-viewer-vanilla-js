@@ -1,0 +1,37 @@
+{
+  "name": "wikipedia-viewer-vanilla-js",
+  "version": "1.0.0",
+  "description": "My project for the Build a Wikipedia Viewer challenge as part of the curriculum for the Coding Interview Take Home Projects on freeCodeCamp. Built with vanilla JS.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autumnchris/wikipedia-viewer.git"
+  },
+  "author": "autumnchris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/autumnchris/wikipedia-viewer/issues"
+  },
+  "homepage": "https://autumnchris.github.io/wikipedia-viewer-vanilla-js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^4.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "normalize.css": "^5.0.0",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

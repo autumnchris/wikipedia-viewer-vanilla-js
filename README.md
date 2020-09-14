@@ -8,9 +8,11 @@ My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodeca
 * AJAX
 * [axios](https://github.com/axios/axios)
 * JavaScript
-* CSS3
+* [Sass](http://sass-lang.com)
 * HTML5
+* [Webpack](https://webpack.js.org)
 * [Media Wiki API](https://www.mediawiki.org/wiki/API:Main_page)
+* [Babel](https://babeljs.io)
 * [Normalize.css](https://necolas.github.io/normalize.css)
 * [Font Awesome](https://fontawesome.com)
 * [Linux Libertine font](http://www.dafont.com/linux-libertine.font)
@@ -18,3 +20,13 @@ My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodeca
 ## Demo
 
 View project demo at [https://autumnchris.github.io/wikipedia-viewer-vanilla-js](https://autumnchris.github.io/wikipedia-viewer-vanilla-js).
+
+## Installation
+
+```
+$ git clone https://github.com/autumnchris/wikipedia-viewer-vanilla-js.git
+$ cd wikipedia-viewer-vanilla-js
+$ npm install
+$ npm start
+```
+Go to `http://localhost:8080`.
