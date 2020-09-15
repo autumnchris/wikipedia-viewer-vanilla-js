@@ -5,8 +5,8 @@ const SearchForm = (() => {
 
   function submitSearch(event, searchInput) {
     event.preventDefault();
-    document.querySelector('.search-results') ? ResultsContainer.removeSearchResults() : null;
-    document.querySelector('.error-message') ? ResultsContainer.removeErrorMessage() : null;
+    ResultsContainer.removeSearchResults();
+    ResultsContainer.removeErrorMessage();
     ResultsContainer.renderLoadingSpinner();
 
     if (!searchInput) {
@@ -19,7 +19,7 @@ const SearchForm = (() => {
         ResultsContainer.removeLoadingSpinner();
         searchResults.length === 0 ? ResultsContainer.renderErrorMessage(`Unable to find results for "${searchInput}". Consider revising your search.`) : ResultsContainer.renderSearchResults(searchResults);
       }).catch(() => {
-        ResultsContainer.removeLoadingSpinner()
+        ResultsContainer.removeLoadingSpinner();
         ResultsContainer.renderErrorMessage('Unable to load Wikipedia search results at this time.');
       });
     }

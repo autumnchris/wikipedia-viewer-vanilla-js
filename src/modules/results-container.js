@@ -9,7 +9,8 @@ const ResultsContainer = (() => {
   }
 
   function removeLoadingSpinner() {
-    document.querySelector('main').removeChild(document.querySelector('.loading-spinner'));
+    const loadingSpinner = document.querySelector('.loading-spinner');
+    loadingSpinner ? document.querySelector('main').removeChild(loadingSpinner) : null;
   }
 
   function renderErrorMessage(messageText) {
@@ -21,7 +22,8 @@ const ResultsContainer = (() => {
   }
 
   function removeErrorMessage() {
-    document.querySelector('main').removeChild(document.querySelector('.error-message'));
+    const errorMessage = document.querySelector('.error-message');
+    errorMessage ? document.querySelector('main').removeChild(errorMessage) : null;
   }
 
   function renderSearchResults(searchResults) {
@@ -39,7 +41,8 @@ const ResultsContainer = (() => {
   }
 
   function removeSearchResults() {
-    document.querySelector('main').removeChild(document.querySelector('.search-results'));
+    const searchResults = document.querySelector('.search-results');
+    searchResults ? document.querySelector('main').removeChild(searchResults) : null;
   }
 
   return {
