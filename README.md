@@ -6,7 +6,7 @@ My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodeca
 
 ## Built With
 * AJAX
-* [axios](https://github.com/axios/axios)
+* [Axios](https://axios-http.com)
 * JavaScript
 * [Sass](http://sass-lang.com)
 * HTML5
