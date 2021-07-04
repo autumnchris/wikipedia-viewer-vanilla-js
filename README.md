@@ -1,6 +1,8 @@
 # Wikipedia Viewer (vanilla JS)
 
-My project for the [Build a Wikipedia Viewer challenge](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-wikipedia-viewer) as part of the curriculum for the Coding Interview Take Home Projects on [freeCodeCamp](https://www.freecodecamp.org). Built with vanilla JS.
+A front-end web app that takes a search input and gets a list of Wikipedia search results using the Media Wiki API. Built with vanilla JS.
+
+Inspired by the [Build a Wikipedia Viewer challenge](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-wikipedia-viewer) as part of the curriculum for the [Coding Interview Prep](https://www.freecodecamp.org/learn/coding-interview-prep) on [freeCodeCamp](https://www.freecodecamp.org).
 
 ---
 
