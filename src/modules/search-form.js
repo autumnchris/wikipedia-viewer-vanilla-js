@@ -9,7 +9,7 @@ const SearchForm = (() => {
     ResultsContainer.removeErrorMessage();
     ResultsContainer.renderLoadingSpinner();
 
-    if (!searchInput) {
+    if (!searchInput.trim()) {
       ResultsContainer.removeLoadingSpinner();
       ResultsContainer.renderErrorMessage('A text input must be submitted to get search results.');
     }
@@ -28,11 +28,12 @@ const SearchForm = (() => {
   function renderForm() {
     const searchForm = document.createElement('form');
     searchForm.setAttribute('role', 'search');
+    searchForm.setAttribute('novalidate', 'true');
     searchForm.classList.add('search-form');
     searchForm.innerHTML = `
     <div class="form-group">
       <span class="fas fa-search search-icon"></span>
-      <input type="search" class="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." autofocus required />
+      <input type="text" class="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." autofocus />
     </div>
     <div class="button-group">
       <input type="submit" class="button" value="Search" />
