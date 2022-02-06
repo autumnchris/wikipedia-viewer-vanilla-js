@@ -33,10 +33,10 @@ const SearchForm = (() => {
     searchForm.innerHTML = `
     <div class="form-group">
       <span class="fas fa-search search-icon"></span>
-      <input type="text" class="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." autofocus />
+      <input type="text" class="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." required autofocus />
     </div>
     <div class="button-group">
-      <input type="submit" class="button" value="Search" />
+      <button type="submit" class="button">Search</button>
       <a href="https://en.wikipedia.org/wiki/Special:Random" class="button" target="_blank">Random Article</a>
     </div>`;
 
