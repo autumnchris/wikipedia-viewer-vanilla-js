@@ -8,8 +8,9 @@ const SearchForm = (() => {
     ResultsContainer.removeSearchResults();
     ResultsContainer.removeErrorMessage();
     ResultsContainer.renderLoadingSpinner();
+    searchInput = searchInput.trim();
 
-    if (!searchInput.trim()) {
+    if (!searchInput) {
       ResultsContainer.removeLoadingSpinner();
       ResultsContainer.renderErrorMessage('A text input must be submitted to get search results.');
     }
