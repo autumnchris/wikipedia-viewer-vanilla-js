@@ -1,4 +1,4 @@
-import { SearchForm } from './search-form';
+import { SearchForm } from './Search-Form';
 
 const App = (() => {
 
