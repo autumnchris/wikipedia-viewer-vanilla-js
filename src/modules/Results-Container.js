@@ -16,7 +16,7 @@ const ResultsContainer = (() => {
   function renderErrorMessage(messageText) {
     const errorMessage = document.createElement('p');
     errorMessage.classList.add('message', 'error-message');
-    errorMessage.innerHTML = `<span class="fa fa-exclamation-circle fa-lg fa-fw"></span> ${messageText}`;
+    errorMessage.innerHTML = `<span class="fa fa-exclamation-circle fa-lg fa-fw" aria-hidden="true"></span> ${messageText}`;
 
     document.querySelector('main').appendChild(errorMessage);
   }

@@ -33,7 +33,7 @@ const SearchForm = (() => {
     searchForm.classList.add('search-form');
     searchForm.innerHTML = `
     <div class="form-group">
-      <span class="fas fa-search search-icon"></span>
+      <span class="fas fa-search search-icon" aria-hidden="true"></span>
       <input type="text" class="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." required autofocus />
     </div>
     <div class="button-group">
