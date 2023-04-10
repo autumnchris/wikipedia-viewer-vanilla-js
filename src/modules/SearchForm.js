@@ -1,32 +1,52 @@
 import axios from 'axios';
-import { ResultsContainer } from './ResultsContainer';
+import LoadingSpinner from './LoadingSpinner';
+import ResultsContainer from './ResultsContainer';
+import ErrorMessage from './ErrorMessage';
 
-const SearchForm = (() => {
+class SearchForm {
+  constructor() {
+    this.loadingSpinner = new LoadingSpinner();
+    this.errorMessage = new ErrorMessage();
+    this.resultsContainer = new ResultsContainer();
+  }
 
-  function submitSearch(event, searchInput) {
+  handleSubmit(event, searchValue) {
     event.preventDefault();
-    ResultsContainer.removeSearchResults();
-    ResultsContainer.removeErrorMessage();
-    ResultsContainer.renderLoadingSpinner();
-    searchInput = searchInput.trim();
+    this.loadingSpinner.removeLoadingSpinner('main');
+    this.resultsContainer.removeResultsContainer('main');
+    this.errorMessage.removeErrorMessage('main');
+    this.loadingSpinner.renderLoadingSpinner('main');
+    searchValue = searchValue.trim();
 
-    if (!searchInput) {
-      ResultsContainer.removeLoadingSpinner();
-      ResultsContainer.renderErrorMessage('A text input must be submitted to get search results.');
+    if (!searchValue) {
+      this.loadingSpinner.removeLoadingSpinner('main');
+      this.errorMessage.renderErrorMessage('A text input must be submitted to get search results.', 'main');
     }
     else {
-      axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchInput}&origin=*&format=json`).then(wikiData => {
-        const searchResults = wikiData.data.query.search;
-        ResultsContainer.removeLoadingSpinner();
-        searchResults.length === 0 ? ResultsContainer.renderErrorMessage(`Unable to find results for "${searchInput}". Consider revising your search.`) : ResultsContainer.renderSearchResults(searchResults);
-      }).catch(() => {
-        ResultsContainer.removeLoadingSpinner();
-        ResultsContainer.renderErrorMessage('Unable to load Wikipedia search results at this time.');
-      });
+      this.fetchSearchResults(searchValue);
     }
   }
 
-  function renderForm() {
+  fetchSearchResults(searchValue) {
+    axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchValue}&origin=*&format=json`)
+    .then(response => {
+      const searchResults = response.data.query.search;
+      this.loadingSpinner.removeLoadingSpinner('main');
+
+      if (searchResults.length !== 0) {
+        this.resultsContainer.renderResultsContainer(searchResults, 'main');
+      }
+      else {
+        this.errorMessage.renderErrorMessage(`Unable to find results for \"${searchValue}\". Consider revising your search.`, 'main');
+      }
+    }).catch(() => {
+      this.loadingSpinner.removeLoadingSpinner('main');
+      this.errorMessage.renderErrorMessage('Unable to load Wikipedia search results at this time.', 'main');
+    });
+  }
+
+  // DOM methods
+  renderSearchForm(location) {
     const searchForm = document.createElement('form');
     searchForm.setAttribute('role', 'search');
     searchForm.setAttribute('novalidate', 'true');
@@ -34,20 +54,14 @@ const SearchForm = (() => {
     searchForm.innerHTML = `
     <div class="form-group">
       <span class="fas fa-search search-icon" aria-hidden="true"></span>
-      <input type="text" class="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." required autofocus />
+      <input type="text" class="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." required autoFocus />
     </div>
     <div class="button-group">
       <button type="submit" class="button">Search</button>
       <a href="https://en.wikipedia.org/wiki/Special:Random" class="button" target="_blank">Random Article</a>
     </div>`;
-
-    document.querySelector('main').appendChild(searchForm);
+    document.querySelector(location).appendChild(searchForm);
   }
+}
 
-  return {
-    submitSearch,
-    renderForm
-  };
-})();
-
-export { SearchForm };
+export default SearchForm;
