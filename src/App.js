@@ -26,7 +26,7 @@ class App {
 
   renderMain(location) {
     const main = document.createElement('main');
-    main.innerHTML = `<div class=" fab fa-wikipedia-w fa-4x"></div>`;
+    main.innerHTML = `<div class="fab fa-wikipedia-w fa-4x"></div>`;
     document.querySelector(location).appendChild(main);
   }
 }
