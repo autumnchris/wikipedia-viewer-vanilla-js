@@ -13,7 +13,10 @@ class App {
 
   // Event listeners
   events() {
-    document.querySelector('.search-form').addEventListener('submit', event => this.searchForm.handleSubmit(event, document.querySelector('.search-input').value));
+    document.addEventListener('submit', event => {
+      const element = event.target;
+      element.matches('.search-form') ? this.searchForm.handleSubmit(event, document.querySelector('.search-input').value) : null;
+    });
   }
 
   // DOM methods
