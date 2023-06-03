@@ -8,7 +8,6 @@ class App {
     this.footer = new Footer();
     this.searchForm = new SearchForm();
     this.renderApp();
-    this.events();
   }
 
   // Event listeners
@@ -25,6 +24,7 @@ class App {
     this.renderMain('#app');
     this.footer.renderFooter('#app');
     this.searchForm.renderSearchForm('main');
+    this.events();
   }
 
   renderMain(location) {
