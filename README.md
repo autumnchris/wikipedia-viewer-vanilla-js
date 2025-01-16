@@ -7,11 +7,14 @@ Inspired by the [Build a Wikipedia Viewer challenge](https://learn.freecodecamp.
 ---
 
 ## Built With
+* Vanilla JS
 * AJAX
 * [Axios](https://axios-http.com)
 * JavaScript
 * [Sass](http://sass-lang.com)
+* CSS3
 * HTML5
+* [Node.js](https://nodejs.org/en)
 * [Webpack](https://webpack.js.org)
 * [Media Wiki API](https://www.mediawiki.org/wiki/API:Main_page)
 * [Babel](https://babeljs.io)
