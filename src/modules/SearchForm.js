@@ -54,7 +54,7 @@ class SearchForm {
     searchForm.innerHTML = `
     <div class="form-group">
       <span class="fas fa-search search-icon" aria-hidden="true"></span>
-      <input type="text" class="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." required autoFocus />
+      <input type="text" name="searchInput" class="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." id="search-input" autocomplete="off" required autoFocus />
     </div>
     <div class="button-group">
       <button type="submit" class="button">Search</button>
