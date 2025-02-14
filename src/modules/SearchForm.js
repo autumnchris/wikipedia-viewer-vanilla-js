@@ -58,7 +58,7 @@ class SearchForm {
     </div>
     <div class="button-group">
       <button type="submit" class="button">Search</button>
-      <a href="https://en.wikipedia.org/wiki/Special:Random" class="button" target="_blank">Random Article <span class="fa-solid fa-arrow-up-right-from-square"></span></a>
+      <a href="https://en.wikipedia.org/wiki/Special:Random" class="button" target="_blank">Random Article <span class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></span></a>
     </div>`;
     document.querySelector(location).appendChild(searchForm);
   }
