@@ -53,12 +53,12 @@ class SearchForm {
     searchForm.classList.add('search-form');
     searchForm.innerHTML = `
     <div class="form-group">
-      <span class="fas fa-search search-icon" aria-hidden="true"></span>
+      <span class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></span>
       <input type="text" name="searchInput" class="search-input" aria-label="Search Wikipedia..." placeholder="Search Wikipedia..." id="search-input" autocomplete="off" required autoFocus />
     </div>
     <div class="button-group">
       <button type="submit" class="button">Search</button>
-      <a href="https://en.wikipedia.org/wiki/Special:Random" class="button" target="_blank">Random Article</a>
+      <a href="https://en.wikipedia.org/wiki/Special:Random" class="button" target="_blank">Random Article <span class="fa-solid fa-arrow-up-right-from-square"></span></a>
     </div>`;
     document.querySelector(location).appendChild(searchForm);
   }

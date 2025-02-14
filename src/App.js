@@ -29,7 +29,7 @@ class App {
 
   renderMain(location) {
     const main = document.createElement('main');
-    main.innerHTML = `<div class="fab fa-wikipedia-w fa-4x" aria-hidden="true"></div>`;
+    main.innerHTML = `<div class="fa-brands fa-wikipedia-w fa-4x" aria-hidden="true"></div>`;
     document.querySelector(location).appendChild(main);
   }
 }

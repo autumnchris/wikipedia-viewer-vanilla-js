@@ -7,7 +7,9 @@ class ResultsContainer {
       return `<article class="result-item">
         <h2>${resultItem.title}</h2>
         <p>${resultItem.snippet}...</p>
-        <a href="https://en.wikipedia.org/wiki/${resultItem.title}" class="button" target="_blank">Continue Reading &raquo;</a>
+        <div class="button-group">
+          <a href="https://en.wikipedia.org/wiki/${resultItem.title}" class="button" target="_blank">Continue Reading <span class="fa-solid fa-arrow-up-right-from-square"></span></a>
+        </div>
       </article>`;
     }).join('');
     document.querySelector(location).appendChild(resultsContainer);
